@@ -4,7 +4,7 @@
   <groupId>devops.ilp1</groupId>
   <artifactId>ILP</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0</version>
   <name>ILP1UserMgmt Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
@@ -67,7 +67,8 @@
   <build>
     <finalName>ILP_Bookstore</finalName>
 
-	<plugins>
+ <!-- 	<plugins>
+	
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
@@ -130,38 +131,12 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
-				<configuration>
-					<port>6080</port>
-					<path>/ILP_Bookstore</path>
-				</configuration>
-				<executions>
-					<execution>
-						<id>start-tomcat</id>
-						<phase>pre-integration-test</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-						<configuration>
-							<fork>true</fork>
-						</configuration>
-					</execution>
-					<execution>
-						<id>stop-tomcat</id>
-						<phase>post-integration-test</phase>
-						<goals>
-							<goal>shutdown</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 
 
 		</plugins>
-		<pluginManagement>
+ -->		
+ 
+ 		<pluginManagement>
 			<plugins>
 				 <plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -196,7 +171,7 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin> 
-				<plugin>
+<!-- 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>2.1</version>
@@ -208,12 +183,47 @@
                    		 <username>admin</username>
                    		 <password>admin</password>
 					</configuration>
-				</plugin>
-				<plugin>
+				</plugin> -->
+				<!-- plugin for deployement process -->
+<!-- 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>2.7</version>
-				</plugin> 
+					</plugin>  -->
+			<!--  plugin for tomcat -->
+	<!-- 			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+				<url>http://localhost:5050/manager/text</url>
+					<server>mytomcatserver</server>
+					<path>/ILP_Bookstore</path>
+					<update>true</update>
+					<username>admin</username>
+					<password>admin</password>
+				</configuration>
+ 				<executions>
+					<execution>
+						<id>start-tomcat</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<fork>true</fork>
+						</configuration>
+					</execution>
+					<execution>
+						<id>stop-tomcat</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>shutdown</goal>
+						</goals>
+					</execution>
+				</executions>
+                </plugin> -->
+				
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
@@ -224,8 +234,14 @@
 					</configuration>
 				</plugin>
 			</plugins>
-		</pluginManagement> 
-
-	
+		</pluginManagement> 	
 	</build> 
-</project>
+<!-- 	<distributionManagement>
+    	<repository>
+        <id>central</id>
+        <name>devops25-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release</url>
+    	</repository>
+	</distributionManagement>
+ -->
+ </project>
