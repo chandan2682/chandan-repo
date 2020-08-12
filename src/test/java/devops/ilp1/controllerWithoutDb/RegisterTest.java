@@ -35,7 +35,7 @@ public class RegisterTest extends Mockito{
         when(request.getParameter("email")).thenReturn("Xavinash.patel@wipro.com");
         when(request.getParameter("pass")).thenReturn("1234");
         when(request.getParameter("confirmpass")).thenReturn("1234");
-        when(request.getParameter("confirmpass")).thenReturn("1111");
+        when(request.getParameter("confirmpass")).thenReturn("1234");
         when(request.getRequestDispatcher("/index.jsp")).thenReturn(rd);            
         StringWriter stringWriter = new StringWriter();
         PrintWriter writer = new PrintWriter(stringWriter);
