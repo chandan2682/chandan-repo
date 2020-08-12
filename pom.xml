@@ -67,7 +67,7 @@
   <build>
     <finalName>ILP_Bookstore</finalName>
 
- <!-- 	<plugins>
+  	<plugins>
 	
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -134,7 +134,7 @@
 
 
 		</plugins>
- -->		
+ 		
  
  		<pluginManagement>
 			<plugins>

@@ -14,12 +14,13 @@ public class UserServiceTest {
 		assertEquals(true,new UserService().isAuthorized(u1));
 	}
 
-	@Test
-	public void testUpdatePassword() {
-		User u1=new User("","","9876","avinash.patel@wipro.com");
-		assertEquals(true,new UserService().updatePassword(u1));
+	
+	@Test 
+	public void testUpdatePassword() { User u1=new
+		User("","","9876","avinash.patel@wipro.com"); assertEquals(true,new
+		UserService().updatePassword(u1)); 
 	}
-
+	
 	@Test
 	public void testDoRegistration() {
 		User u1=new User("RAM","RAJ","1234","raj@wipro.com");
